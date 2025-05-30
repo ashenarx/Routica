@@ -65,7 +65,8 @@
             transition: border-color 0.3s ease;
         }
         .input-group input:hover,
-        .input-group input:focus {
+        .input-group input:focus,
+        .input-group input:not(:placeholder-shown) {
             border-color: #163D54;
         }
         .input-group input::placeholder {
