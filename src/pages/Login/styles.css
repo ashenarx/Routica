@@ -72,10 +72,12 @@ body {
     border-radius: 100px;
     background-color: #e0e0e0;
     cursor: pointer;
-    font-weight: 700;
+    font-weight: 600;
     font-size: 16px;
+    color: #BABEC1;
     transition: background-color 0.3s ease, color 0.3s ease;
 }
+.input-group button
 .input-group button.active {
     background-color: #1B4965;
     color: #fff;
@@ -91,8 +93,8 @@ body {
 .checklist-row label {
     display: inline-flex;
     align-items: center;
-    font-weight: 500;
-    font-size: 14px;
+    font-weight: 600;
+    font-size: 16px;
     color: #666;
     cursor: pointer;
     transition: color 0.3s ease;
@@ -111,7 +113,7 @@ body {
 .forgot-password {
     max-width: 400px;
     font-weight: 500;
-    font-size: 14px;
+    font-size: 16px;
     color: #1B4965;
     text-align: right;
     cursor: pointer;

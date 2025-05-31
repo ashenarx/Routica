@@ -72,8 +72,9 @@ body {
     border-radius: 100px;
     background-color: #e0e0e0;
     cursor: pointer;
-    font-weight: 700;
+    font-weight: 600;
     font-size: 16px;
+    color: #BABEC1;
     transition: background-color 0.3s ease, color 0.3s ease;
 }
 .input-group button.active {
