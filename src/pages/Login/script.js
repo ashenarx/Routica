@@ -10,5 +10,3 @@ document.addEventListener('DOMContentLoaded', () => {
     emailInput.addEventListener('input', updateButtonState);
     passwordInput.addEventListener('input', updateButtonState);
 });
-
-// MASIH GABISA INI DI LOGIN
