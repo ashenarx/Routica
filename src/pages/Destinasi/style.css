@@ -18,9 +18,10 @@
 }
 
 .logo {
-    font-family: 'Post No Bills Colombo ExtraBold', sans-serif;
-    font-size: 1.5rem;
-    color: #1a3c61;
+    font-family: 'Stick No Bills', sans-serif;
+    font-weight: 800;
+    font-size: 36px;
+    color: #1B4965;
 }
 
 .search-bar input {
@@ -141,15 +142,21 @@
     margin-bottom: 2rem;
 }
 
-.destination-images {
+.destination-content {
     flex: 1;
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+}
+
+.destination-images {
     display: flex;
     gap: 1rem;
 }
 
 .main-image {
     flex: 1;
-    max-width: 664px;
+    width: 800px;
     height: 324px;
     object-fit: cover;
     border-radius: 10px;
@@ -162,13 +169,14 @@
 }
 
 .side-images img {
-    width: 180px;
-    height: 140px;
+    width: 260px;
+    height: 154px;
     object-fit: cover;
     border-radius: 10px;
 }
 
 .info-card {
+    height: 540px;
     flex: 0 0 300px;
     background-color: #fff;
     padding: 1rem;
@@ -211,7 +219,7 @@
 
 /* Activities Section */
 .activities-section {
-    margin-top: 2rem;
+    /* Removed margin-top since it's now inside destination-content */
 }
 
 .activities-grid {
@@ -244,7 +252,7 @@
 
 /* Important Information Section */
 .important-info {
-    margin-top: 2rem;
+    /* Removed margin-top since it's now inside destination-content */
 }
 
 .important-info ul {
@@ -265,3 +273,4 @@
     font-size: 1.5rem;
     line-height: 1;
 }
+
