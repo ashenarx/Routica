@@ -24,7 +24,7 @@ body {
     font-family: 'Stick No Bills', sans-serif;
     font-weight: 800;
     font-size: 36px;
-    margin-bottom: 40px;
+    margin-top: 20px;
     color: #1B4965;
 }
 .left-panel .greeting {
@@ -86,13 +86,9 @@ body {
     max-width: 400px;
     display: flex;
     justify-content: space-between;
-    align-items: center;
-    margin-top: 4px;
-    margin-bottom: 4px;
 }
 .checklist-row label {
     display: inline-flex;
-    align-items: center;
     font-weight: 600;
     font-size: 16px;
     color: #666;
@@ -100,7 +96,7 @@ body {
     transition: color 0.3s ease;
     white-space: nowrap;
 }
-.checklist-row label input[type="checkbox"] { /* BELUM LURUS AMA TEXT */
+.checklist-row label input[type="checkbox"] {
     margin-right: 8px;
     width: 16px;
     height: 16px;
@@ -115,7 +111,6 @@ body {
     font-weight: 500;
     font-size: 16px;
     color: #1B4965;
-    text-align: right;
     cursor: pointer;
     text-decoration: none;
     transition: color 0.3s ease;
@@ -125,7 +120,7 @@ body {
     text-decoration: underline;
 }
 .login-link {
-    margin-top: 24px;
+    margin-bottom: 20px;
     font-size: 16px;
     color: #666;
 }
