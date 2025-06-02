@@ -1,0 +1,205 @@
+body {
+    width: 100%;
+    height: 100%;
+}
+
+header {
+    margin-left: 40px;
+    margin-bottom: 10px;
+}
+
+main {
+    flex-direction: column;
+    font-family: 'Poppins', sans-serif;
+    display: flex;
+    height: 100vh;
+    margin: 0;
+    background-color: #F4FBFF;
+}
+
+.logo {
+    font-family: 'Stick No Bills', sans-serif;
+    font-weight: 800;
+    font-size: 36px;
+    margin-top: 20px;
+    color: #1B4965;
+}
+
+.search {
+    display: flex;
+    align-items: center;
+    background-color: #F4FBFF;
+    border-radius: 20px;
+    padding: 8px 12px;
+    width: 300px;
+    margin-left: 130px;
+    margin-top: -40px;
+}
+
+.search img {
+    width: 20px;
+    height: 20px;
+    margin-right: 10px;
+    opacity: 0.5;
+}
+
+.search input {
+    border: none;
+    background: transparent;
+    outline: none;
+    font-size: 14px;
+    color: #555;
+    width: 100%;
+}
+
+.nav-bar {
+    width: 100%;
+    align-items: flex-end;
+    text-align: right;
+    color: #1B4965;
+    font-size: 18px;
+    font-weight: 500;
+    margin-left: -200px;
+    margin-top: -30px;
+    text-decoration: none;
+}
+
+.profile {
+    position: relative;
+    width: fit-content;
+    height: fit-content;
+    text-align: right;
+    margin-left: 1100px; 
+    margin-top: -30px;
+}
+
+.ellipse {
+    display: block;
+}
+
+#profil {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 1;
+}
+
+.title {
+    margin-top: 40px;
+    text-align: center;
+}
+
+.container {
+  margin: 0 auto;
+  display: flex;
+  border-radius: 12px;
+  gap: 20px;
+  background-color: #CAE9FF;
+  align-items: flex-start;
+  padding: 20px;
+  width: fit-content;
+}
+
+.form-group {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+label {
+  font-weight: bold;
+  color: #1B3A57;
+}
+
+select {
+  width: 200px;
+  height: 40px;
+  border: none;
+  border-radius: 8px;
+  padding: 0 10px;
+  font-size: 14px;
+}
+
+.button-wrapper {
+    margin-top: 30px;
+}
+
+.cari-btn {
+  height: 40px;
+  background-color: #1B3A57;
+  color: white;
+  padding: 12px 24px;
+  border: none;
+  border-radius: 20px;
+  padding: 0 20px;
+  font-weight: bold;
+  cursor: pointer;
+}
+
+.body-title {
+    padding: 40px;
+}
+
+.explore-1, .explore-2 {
+    display: flex;
+}
+
+.explore-2 {
+    margin-top: 100px;
+}
+
+.bromo img, .malio img, .boro img, .parahu img, 
+.kotu img, .ptt img, .toba img, .wai img {
+    width: 316px;
+    height: 211px;
+    border-radius: 12px;
+    margin-left: 40px;
+    margin-top: -30px;
+}
+
+.lokasi-bromo, .lokasi-malio, .lokasi-boro, .lokasi-parahu, 
+.lokasi-kotu, .lokasi-ptt, .lokasi-toba, .lokasi-wai {
+    position: absolute;
+    margin-top: -35px;
+    margin-left: 40px;
+    width: 316px;
+    height: 80px;
+    border-radius: 0px 0px 12px 12px;
+    background-color: #1B4965;
+}
+
+.lokasi-bromo h3, .lokasi-bromo h5, .lokasi-bromo img,
+.lokasi-malio h3, .lokasi-malio h5, .lokasi-malio img,
+.lokasi-boro h3, .lokasi-boro h5, .lokasi-boro img,
+.lokasi-parahu h3, .lokasi-parahu h5, .lokasi-parahu img,
+.lokasi-kotu h3, .lokasi-kotu h5, .lokasi-kotu img,
+.lokasi-ptt h3, .lokasi-ptt h5, .lokasi-ptt img,
+.lokasi-toba h3, .lokasi-toba h5, .lokasi-toba img,
+.lokasi-wai h3, .lokasi-wai h5, .lokasi-wai img {
+    color: white;
+    margin-left: 16px;
+}
+
+.lokasi-bromo h5, .lokasi-malio h5, .lokasi-boro h5, .lokasi-parahu h5, 
+.lokasi-kotu h5, .lokasi-ptt h5, .lokasi-toba h5, .lokasi-wai h5 {
+    margin-left: 40px;
+    margin-top: -40px;
+}
+
+.lokasi-bromo img, .lokasi-malio img, .lokasi-boro img, .lokasi-parahu img, 
+.lokasi-kotu img, .lokasi-ptt img, .lokasi-toba img, .lokasi-wai img {
+    margin-top: -40px;
+    vertical-align: middle;
+}
+
+.plus img {
+    width: 32px;
+    display: block;
+    background-color: white;
+    height: 32px;
+    border-radius: 15px;
+    margin-left: 265px;
+    margin-top: -60px;
+}
+
