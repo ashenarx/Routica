@@ -64,6 +64,16 @@ main {
     text-decoration: none;
 }
 
+.nav-bar a{
+    color: var(--Primary-Main, #1B4965);
+    font-family: Poppins;
+    font-size: 20px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: 120%; 
+    text-decoration: none;
+}
+
 .profile {
     position: relative;
     width: fit-content;

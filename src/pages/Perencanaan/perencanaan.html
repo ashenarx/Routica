@@ -3,9 +3,71 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Plan-Trip</title>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap" rel="stylesheet" />
+    <link href="https://fonts.googleapis.com/css2?family=Stick+No+Bills:wght@200..800&display=swap" rel="stylesheet"/>
+    <link rel="stylesheet" href="styles.css">
 </head>
 <body>
-    
+    <header>
+        <div class="logo">ROUTICA</div>
+        <div class="search">
+            <img src="../../assets/icons/search.svg">
+            <input type="text" placeholder="Cari destinasi impianmu di sini">
+        </div>
+        <div class="nav-bar">
+            <a href="#">Explore</a>
+            <a href="#">Itineraries</a>
+        </div>
+        <div class="profile">
+            <img class="ellipse" src="../../assets/icons/Ellipse 2.svg">
+            <img id="profil" src="../../assets/icons/Profile.svg">
+        </div>
+    </header>
+
+    <main>
+        <div class="title">
+            <h1>Rencanakan perjalanan barumu</h1>
+        </div>
+        <div class="container">
+            <label>|Judul Trip</label>
+            <div class="date">
+                <input type="date" placeholder="Tambah tanggal perjalanan">
+            </div>
+            <div class="location">
+                <img src="../../assets/icons/location-marker.svg">
+                <input type="text" placeholder="Tambah lokasi">
+            </div>
+            <div class="upload">
+                <img src="../../assets/icons/upload.svg">
+                <input type="file" placeholder="Tambah Gambar">
+            </div>
+        </div>
+        <div class="note">
+            <img src="../../assets/icons/chevron-down.svg">
+            <label>Catatan</label>
+        </div>
+        <div class="notes">
+            <input type="text" placeholder="Masukkan catatan yang perlu untuk perjalananmu di sini">
+        </div>
+        <div class="itinerary">
+            <img src="../../assets/icons/chevron-down.svg">
+            <label>Itinerary</label>
+        </div>
+        <div class="dates">
+            <input type="date" placeholder="Tambah tanggal perjalanan">
+        </div>
+        <div class="himbauan">
+            <h5>Anda belum memiliki itinerary</h5>
+            <p>Silakan menambahkan tanggal perjalanan terlebih dahulu 
+                sebelum membuat itinerary</p>
+        </div>
+        <div class="empty">
+            <h5>Kosongkan</h5>
+        </div>
+        <div class="btn-save">
+            <button>Simpan itinerary</button>
+        </div>
+    </main>
 </body>
 </html>
