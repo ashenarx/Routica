@@ -28,14 +28,14 @@
         <h2>Hasil Pencarian</h2>
         <?php
         // Database connection
-        $conn = new mysqli("localhost", "root", "", "tourism_db");
+        $conn = new mysqli("localhost", "root", "", "destinasi_db");
         if ($conn->connect_error) {
             die("Connection failed: " . $conn->connect_error);
         }
 
         // Search query
 $search = isset($_GET['search']) ? $conn->real_escape_string($_GET['search']) : ''; 
-        $sql = "SELECT id, name, category, main_image FROM destinations";
+        $sql = "SELECT id, name, category, main_image FROM destinasi";
         if ($search) {
             $sql .= " WHERE name LIKE '%$search%' OR category LIKE '%$search%'";
         }
