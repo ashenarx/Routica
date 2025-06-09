@@ -100,9 +100,9 @@ select {
 }
 
 .card .plus {
-  position: absolute;
-  bottom: 12px;
-  right: 12px;
+    position: absolute;
+    bottom: 12px;
+    right: 12px;
 }
 
 .card .plus img {
