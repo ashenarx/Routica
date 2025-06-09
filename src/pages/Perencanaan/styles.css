@@ -4,8 +4,8 @@ body {
 }
 
 header {
-    margin-left: 2.5rem;
-    margin-bottom: 0.625rem;
+    margin-left: 40px;
+    margin-bottom: 10px;
 }
 
 main {
@@ -20,8 +20,8 @@ main {
 .logo {
     font-family: 'Stick No Bills', sans-serif;
     font-weight: 800;
-    font-size: 2.25rem;
-    margin-top: 1.25rem;
+    font-size: 36px;
+    margin-top: 20px;
     color: #1B4965;
 }
 
@@ -29,17 +29,17 @@ main {
     display: flex;
     align-items: center;
     background-color: #F4FBFF;
-    border-radius: 1.25rem;
-    padding: 0.5rem 0.75rem;
-    width: 18.75rem;
-    margin-left: 8.125rem;
-    margin-top: -2.5rem;
+    border-radius: 20px;
+    padding: 8px 12px;
+    width: 300px;
+    margin-left: 130px;
+    margin-top: -40px;
 }
 
 .search img {
-    width: 1.25rem;
-    height: 1.25rem;
-    margin-right: 0.625rem;
+    width: 20px;
+    height: 20px;
+    margin-right: 10px;
     opacity: 0.5;
 }
 
@@ -47,7 +47,7 @@ main {
     border: none;
     background: transparent;
     outline: none;
-    font-size: 0.875rem;
+    font-size: 14px;
     color: #555;
     width: 100%;
 }
@@ -57,17 +57,17 @@ main {
     align-items: flex-end;
     text-align: right;
     color: #1B4965;
-    font-size: 1.125rem;
+    font-size: 18px;
     font-weight: 500;
-    margin-left: -12.5rem;
-    margin-top: -1.875rem;
+    margin-left: -200px;
+    margin-top: -30px;
     text-decoration: none;
 }
 
-.nav-bar a {
+.nav-bar a{
     color: var(--Primary-Main, #1B4965);
     font-family: Poppins;
-    font-size: 1.25rem;
+    font-size: 20px;
     font-style: normal;
     font-weight: 500;
     line-height: 120%; 
@@ -79,8 +79,8 @@ main {
     width: fit-content;
     height: fit-content;
     text-align: right;
-    margin-left: 68.75rem;
-    margin-top: -1.875rem;
+    margin-left: 1100px; 
+    margin-top: -30px;
 }
 
 .ellipse {
@@ -96,67 +96,88 @@ main {
 }
 
 .title {
-    margin-top: 2.5rem;
+    margin-top: 40px;
     text-align: center;
 }
 
 .container {
-    width: 56rem;
-    height: 13.6875rem;
+    width: 896px;
+    height: 219px;
     flex-shrink: 0;
-    border-radius: 0.75rem;
+    border-radius: 12px;
     background: var(--Primary-Main, #1B4965);
-    margin-left: 11.25rem;
-    margin-top: 0.625rem;
+    margin-left: 180px;
+    margin-top: 10px;
 }
 
 .container label {
     color: var(--Neutral-03, #E4E8EC);
     font-family: Poppins;
-    font-size: 2.25rem;
+    font-size: 36px;
     font-style: normal;
     font-weight: 700;
     line-height: 120%; 
     display: block;
-    padding: 2.5rem;
-}
-
-.date, .location {
-    display: inline-flex;
-    padding: 0.75rem 1.5rem;
-    justify-content: center;
-    align-items: center;
-    gap: 0.25rem;
-    border-radius: 6.25rem;
-    background: var(--Neutral-06, #BABEC1);
+    padding: 40px;
 }
 
 .date {
-    margin-left: 2.5rem;
-    margin-top: 0.625rem;
+    display: inline-flex;
+    padding: 12px 24px;
+    justify-content: center;
+    align-items: center;
+    gap: 4px;
+    border-radius: 100px;
+    background: var(--Neutral-06, #BABEC1);
+    margin-left: 40px;
+    margin-top: 10px;
 }
 
-.date img, .location img {
-    width: 1.25rem;
-    height: 1.25rem;
+.date img {
+    width: 20px;
+    height: 20px;
     aspect-ratio: 1/1;
 }
 
-.date input, .location input {
+.date input {
     color: var(--Neutral-03, #E4E8EC);
     font-family: Poppins;
-    font-size: 1rem;
+    font-size: 16px;
     font-style: normal;
     font-weight: 400;
-    line-height: 1.5rem; 
+    line-height: 24px; 
     border: none;
     background: transparent;
     outline: none;
 }
 
 .location {
-    transform: translateY(0.3125rem);
-    margin-left: 1.25rem;
+    display: inline-flex;
+    padding: 12px 24px;
+    justify-content: center;
+    align-items: center;
+    gap: 4px;
+    border-radius: 100px;
+    background: var(--Neutral-06, #BABEC1);
+    transform: translateY(5px);
+    margin-left: 20px;
+}
+
+.location img {
+    width: 20px;
+    height: 20px;
+}
+
+.location input {
+    color: var(--Neutral-03, #E4E8EC);
+    font-family: Poppins;
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 24px;
+    border: none;
+    background: transparent;
+    outline: none;
 }
 
 .location input::placeholder {
@@ -164,28 +185,213 @@ main {
 }
 
 .upload {
-    width: 14.3125rem;
-    height: 8.6875rem;
+    width: 229px;
+    height: 139px;
     flex-shrink: 0;
-    border-radius: 0.5rem;
+    border-radius: 8px;
     background: var(--Neutral-06, #BABEC1);
-    margin-left: 38.75rem;
-    margin-top: -8.75rem;
+    margin-left: 620px;
+    margin-top: -140px;
 }
 
 .upload img {
-    width: 5rem;
-    height: 5rem;
+    width: 80px;
+    height: 80px;
     aspect-ratio: 1/1;
-    margin-left: 4.6875rem;
-    margin-top: 0.9375rem;
+    margin-left: 75px;
+    margin-top: 15px;
 }
 
 .upload input {
+    align-self: stretch;
     color: var(--Neutral-03, #E4E8EC);
     font-family: Poppins;
-    font-size: 0.9375rem;
+    font-size: 15px;
+    font-style: normal;
+    font-weight: 400;
     line-height: 120%; 
-    margin-left: 0.625rem;
+    margin-left: 10px;
 }
 
+.note, .itinerary {
+    margin-left: 180px;
+    margin-top: 32px;
+}
+
+.note img, .itinerary img {
+    width: 32px;
+    height: 32px;
+    aspect-ratio: 1/1;
+    transform: translateY(6px);
+}
+
+.note label, .itinerary label {
+    color: var(--Neutral-10, #0A0A0A);
+    text-align: center;
+    font-family: Poppins;
+    font-size: 28px;
+    font-style: normal;
+    font-weight: 600;
+    line-height: 120%; 
+}
+
+.notes {
+    display: flex;
+    width: 850px;
+    padding: 16px 24px;
+    align-items: center;
+    align-content: center;
+    gap: 8px;
+    flex-wrap: wrap;
+    border-radius: 100px;
+    border: 1px solid var(--Neutral-05, #BABEC1);
+    margin-left: 180px;
+    margin-top: 20px;
+}
+
+.notes input {
+    color: var(--Neutral-10, #0A0A0A);
+    font-family: Poppins;
+    font-size: 14px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 21px; 
+    border: none;
+    background: transparent;
+    outline: none;
+    width: 100%;
+}
+
+.dates {
+    display: inline-flex;
+    padding: 12px 24px;
+    justify-content: center;
+    align-items: center;
+    gap: 4px;
+    border-radius: 100px;
+    background: var(--Neutral-06, #BABEC1);
+    width: 200px;
+    margin-left: 830px;
+    margin-top: -45px;
+}
+
+.dates input {
+    color: var(--Neutral-03, #E4E8EC);
+    font-family: Poppins;
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 600;
+    line-height: 24px; 
+    border: none;
+    background: transparent;
+    outline: none;
+}
+
+.himbauan {
+    width: 473px;
+    margin-left: 400px;
+    margin-top: 20px;
+}
+
+.himbauan h5, .himbauan p {
+    color: var(--Neutral-06, #BABEC1);
+    text-align: center;
+    font-family: Poppins;
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 24px;
+}
+
+.himbauan p {
+    margin-top: -25px;
+}
+
+.empty {
+    width: 294px;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 10px;
+    margin-left: 600px;
+    margin-top: 20px;
+}
+
+.empty h5 {
+    color: var(--Neutral-05, #BABEC1);
+    font-family: Poppins;
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 600;
+    line-height: 24px; 
+}
+
+button {
+    width: 294px;
+    flex-direction: column;
+    align-items: flex-start;
+    border-radius: 100px;
+    color: var(--Neutral-06, #BABEC1);
+    font-family: Poppins;
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 600;
+    line-height: 24px; 
+    padding: 12px;
+    margin-left: 500px;
+}
+
+@media (max-width: 768px) {
+      main {
+        padding: 10px;
+      }
+
+      .title {
+        text-align: center;
+      } 
+
+      .date {
+        transform: translateY(-40px);
+      }
+
+      .location {
+        transform: translateY(25px);
+        margin-left: -210px;
+        width: 200px;
+      }
+
+      .container {
+        margin-left: -10px;
+        width: 750px;
+      }
+
+      .note, .notes,
+      .itinerary {
+        margin-left: -10px;
+      }
+
+      .notes {
+        width: 700px;
+      }
+
+      .dates {
+        transform: translateX(-335px);
+      }
+
+      .upload {
+       transform: translateX(-120px);
+      }
+
+      .himbauan {
+        transform: translateX(-250px);
+      }
+
+      .empty {
+        transform: translateX(-250px);
+      }
+
+      button {
+        transform: translateX(-250px);
+        max-width: none;
+      }
+}

@@ -9,221 +9,164 @@ header {
 }
 
 main {
-    flex-direction: column;
+    display: flex;
     font-family: 'Poppins', sans-serif;
-    display: flex;
-    height: 100vh;
-    margin: 0;
-    background-color: #F4FBFF;
-}
-
-.logo {
-    font-family: 'Stick No Bills', sans-serif;
-    font-weight: 800;
-    font-size: 36px;
-    margin-top: 20px;
-    color: #1B4965;
-}
-
-.search {
-    display: flex;
+    flex-direction: column;
     align-items: center;
+    padding: 20px;
     background-color: #F4FBFF;
-    border-radius: 20px;
-    padding: 8px 12px;
-    width: 300px;
-    margin-left: 130px;
-    margin-top: -40px;
-}
-
-.search img {
-    width: 20px;
-    height: 20px;
-    margin-right: 10px;
-    opacity: 0.5;
-}
-
-.search input {
-    border: none;
-    background: transparent;
-    outline: none;
-    font-size: 14px;
-    color: #555;
-    width: 100%;
-}
-
-.nav-bar {
-    width: 100%;
-    align-items: flex-end;
-    text-align: right;
-    color: #1B4965;
-    font-size: 18px;
-    font-weight: 500;
-    margin-left: -200px;
-    margin-top: -30px;
-    text-decoration: none;
-}
-
-.nav-bar a{
-    color: var(--Primary-Main, #1B4965);
-    font-family: Poppins;
-    font-size: 20px;
-    font-style: normal;
-    font-weight: 500;
-    line-height: 120%; 
-    text-decoration: none;
-}
-
-.profile {
-    position: relative;
-    width: fit-content;
-    height: fit-content;
-    text-align: right;
-    margin-left: 1100px; 
-    margin-top: -30px;
-}
-
-.ellipse {
-    display: block;
-}
-
-#profil {
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    z-index: 1;
 }
 
 .title {
-    margin-top: 40px;
     text-align: center;
 }
 
 .itinerary {
     display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 20px;
+    margin-top: 20px;
 }
 
-.liburan-malang-1 {
-    margin-left: 210px;
-}
-
+.liburan-malang-1,
 .liburan-malang-2 {
-    margin-left: 30px;
+    width: 100%;
+    max-width: 400px;
+    border-radius: 12px;
+    background-color: #FFF;
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+}
+
+.kww {
+    position: relative;
 }
 
 #image {
-    width: 400px;
-    height: 200px;
-    flex-shrink: 0;
-    aspect-ratio: 3/4;
-    border-radius: 12px 12px 0px 0px;
-    background: url(<path-to-image>) lightgray 50% / cover no-repeat;
+    width: 100%;
+    height: auto;
+    border-radius: 12px 12px 0 0;
 }
 
-#bulet {
+.edit,
+.delete {
+    position: absolute;
+    top: 10px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
     width: 40px;
     height: 40px;
-    flex-shrink: 0;
-    aspect-ratio: 1/1;
-    fill: var(--Neutral-01, #FFF);
-    transform: translateY(-190px);
-    margin-left: 290px;
 }
 
-#pensil, #sampah {
-    width: 32px;
-    height: 32px;
-    flex-shrink: 0;
-    aspect-ratio: 1/1;
-    transform: translateY(-195px);
-    margin-left: -40px;
+.edit {
+    right: 60px;
 }
 
 .delete {
-    margin-left: 50px;
-    margin-top: -45px;
+    right: 10px;
+}
+
+.edit #bulet,
+.delete #bulet {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 1;
+}
+
+.edit img:not(#bulet),
+.delete img:not(#bulet) {
+    position: relative;
+    z-index: 2;
 }
 
 .detail-kww {
-    display: flex;
-    width: 368px;
-    height: 80px;
-    padding: 20px 16px;
-    flex-direction: column;
-    align-items: flex-start;
-    gap: 12px;
-    border-radius: 0px 0px 12px 12px;
-    background: var(--Primary-Main, #1B4965);
-    margin-top: -53px;
+    padding: 16px;
+    background-color: #1B4965; /* Keep the existing background for the container */
+    color: #FFF;
+    border-radius: 0 0 12px 12px;
+    display: flex; /* Enable flexbox for side-by-side layout */
+    flex-direction: column; /* Stack label and the date/location row */
+    gap: 8px; /* Space between label and date/location */
 }
 
 .detail-kww label {
-    align-self: stretch;
-    color: var(--Neutral-01, #FFF);
-    font-family: Poppins;
-    font-size: 24px;
-    font-style: normal;
+    font-size: 18px;
     font-weight: 700;
-    line-height: 120%; 
 }
 
-.date, .location {
-    display: flex;
-    padding: 8px 12px;
-    justify-content: center;
-    align-items: center;
-    gap: 4px;
-    border-radius: 100px;
-    background: var(--Secondary-Main, #CAE9FF);
-    height: 25px;
-}
-
+.date,
 .location {
-    margin-left: 240px;
-    margin-top: -52px;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    background-color: #CAE9FF; /* Set background color */
+    color: #1B4965; /* Adjust text/icon color for contrast */
+    padding: 8px 12px; /* Add padding for better appearance */
+    border-radius: 8px; /* Optional: rounded corners */
 }
 
-.date img, .location img {
+/* Wrap date and location in a flex container for side-by-side layout */
+.detail-kww > div {
+    display: flex;
+    flex-direction: row; /* Arrange date and location side by side */
+    gap: 12px; /* Space between date and location */
+    flex-wrap: wrap; /* Allow wrapping on smaller screens */
+}
+
+.date img,
+.location img {
     width: 20px;
     height: 20px;
-    aspect-ratio: 1/1;
+    filter: brightness(0) saturate(100%) invert(20%) sepia(50%) saturate(2000%) hue-rotate(180deg); /* Adjust icon color to match text */
 }
 
-.date p, .location p {
-    color: var(--Primary-Main, #1B4965);
-    font-family: Poppins;
+.date p,
+.location p {
     font-size: 14px;
-    font-style: normal;
     font-weight: 500;
-    line-height: 21px; 
+    margin: 0; /* Remove default margins */
 }
 
 .add-itinerary {
-    display: inline-flex;
-    padding: 5px;
-    justify-content: center;
-    width: 200px;
-    height: 40px;
+    display: flex;
     align-items: center;
-    gap: 4px;
+    gap: 8px;
+    padding: 12px 24px;
+    background-color: #1B4965;
+    color: #FFF;
     border-radius: 100px;
-    background: var(--Primary-Main, #1B4965);
-    margin-top: 40px;
-    margin-left: 530px;
+    cursor: pointer;
+    margin-top: 20px;
 }
 
 .add-itinerary img {
     width: 20px;
     height: 20px;
-    aspect-ratio: 1/1;
 }
 
-.add-itinerary p {
-    color: var(--Neutral-01, #FFF);
-    font-family: Poppins;
-    font-size: 16px;
-    font-style: normal;
-    font-weight: 600;
-    line-height: 24px; 
+@media (max-width: 768px) {
+    .detail-kww > div {
+        flex-direction: column; /* Stack date and location vertically on smaller screens */
+        gap: 8px;
+    }
+}
+
+@media (max-width: 480px) {
+    .detail-kww label {
+        font-size: 16px;
+    }
+
+    .date p,
+    .location p {
+        font-size: 12px;
+    }
+
+    .date,
+    .location {
+        padding: 6px 10px; /* Slightly smaller padding for mobile */
+    }
 }

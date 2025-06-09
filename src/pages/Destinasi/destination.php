@@ -1,4 +1,3 @@
-<!-- src/pages/Destinasi/destination.php -->
 <!DOCTYPE html>
 <html>
 <head>
@@ -26,19 +25,17 @@
 
     <section class="destination-detail">
         <?php
-        // Database connection
-        $conn = new mysqli("localhost", "root", "", "destinasi_db");
-        if ($conn->connect_error) {
-            die("Connection failed: " . $conn->connect_error);
-        }
+        include '../../../service/database.php';
 
-        // Get destination ID from URL
-        if (!isset($_GET['id']) || !is_numeric($_GET['id']) || (int)$_GET['id'] <= 0) {
-            echo '<p>Error: ID destinasi tidak valid. Silakan kembali ke <a href="../index.php">halaman pencarian</a>.</p>';
+        if (!isset($_GET['name']) || empty($_GET['name'])) {
+            echo '<p>Error: Name destinasi tidak valid. Silakan kembali ke <a href="../index.php">halaman pencarian</a>.</p>';
         } else {
-            $id = (int)$_GET['id'];
-            $sql = "SELECT * FROM destinasi WHERE id = $id";
-            $result = $conn->query($sql);
+            $name = str_replace('_', ' ', $_GET['name']);
+            $sql = "SELECT * FROM destinasi WHERE name = ?";
+            $stmt = $conn->prepare($sql);
+            $stmt->bind_param("s", $name);
+            $stmt->execute();
+            $result = $stmt->get_result();
 
             if ($result->num_rows > 0) {
                 $row = $result->fetch_assoc();
@@ -103,8 +100,9 @@
                 </div>
             <?php
             } else {
-                echo '<p>Destinasi dengan ID ' . $id . ' tidak ditemukan. Silakan kembali ke <a href="../index.php">halaman pencarian</a>.</p>';
+               echo '<p>Destinasi dengan nama ' . $name . ' tidak ditemukan. Silakan kembali ke <a href="/Routica/src/pages/Pencarian/pencarian.html">halaman pencarian</a>.</p>';
             }
+            $stmt->close();
         }
 
         $conn->close();
