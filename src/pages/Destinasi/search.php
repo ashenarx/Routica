@@ -39,7 +39,7 @@
             $stmt->execute();
             $result = $stmt->get_result();
         } else {
-            $sql .= " LIMIT 8"; // Optional: limit results if no search
+            $sql .= " LIMIT 4";
             $result = $conn->query($sql);
         }
 
