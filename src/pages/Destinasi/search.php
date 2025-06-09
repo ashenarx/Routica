@@ -26,20 +26,22 @@
     <section class="search-results">
         <h2>Hasil Pencarian</h2>
         <?php
-        // Database connection
-        $conn = new mysqli("localhost", "root", "", "destinasi_db");
-        if ($conn->connect_error) {
-            die("Connection failed: " . $conn->connect_error);
-        }
+        include '../service/database.php';
 
         // Search query
-$search = isset($_GET['search']) ? $conn->real_escape_string($_GET['search']) : ''; 
+        $search = isset($_GET['search']) ? $conn->real_escape_string($_GET['search']) : '';
         $sql = "SELECT id, name, category, main_image FROM destinasi";
         if ($search) {
-            $sql .= " WHERE name LIKE '%$search%' OR category LIKE '%$search%'";
+            $sql .= " WHERE name LIKE ? OR category LIKE ?";
+            $stmt = $conn->prepare($sql);
+            $search_param = "%$search%";
+            $stmt->bind_param("ss", $search_param, $search_param);
+            $stmt->execute();
+            $result = $stmt->get_result();
+        } else {
+            $sql .= " LIMIT 8"; // Optional: limit results if no search
+            $result = $conn->query($sql);
         }
-
-        $result = $conn->query($sql);
 
         if ($result->num_rows > 0) {
             while ($row = $result->fetch_assoc()) {
@@ -57,6 +59,9 @@ $search = isset($_GET['search']) ? $conn->real_escape_string($_GET['search']) : 
             echo '<p>Tidak ada hasil ditemukan.</p>';
         }
 
+        if (isset($stmt)) {
+            $stmt->close();
+        }
         $conn->close();
         ?>
     </section>
