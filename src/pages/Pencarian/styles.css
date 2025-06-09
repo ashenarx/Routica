@@ -1,25 +1,25 @@
 body {
-    width: 100%;
-    height: 100%;
+  width: 100%;
+  height: 100%;
 }
 
 header {
-    margin-left: 40px;
-    margin-bottom: 10px;
+  margin-left: 40px;
+  margin-bottom: 10px;
 }
 
 main {
-    flex-direction: column;
-    font-family: 'Poppins', sans-serif;
-    display: flex;
-    height: 100vh;
-    margin: 0;
-    background-color: #F4FBFF;
+  flex-direction: column;
+  font-family: 'Poppins', sans-serif;
+  display: flex;
+  min-height: 100vh;
+  margin: 0;
+  background-color: #F4FBFF;
 }
 
 .title {
-    margin-top: 40px;
-    text-align: center;
+  margin-top: 40px;
+  text-align: center;
 }
 
 .container {
@@ -54,84 +54,94 @@ select {
 }
 
 .button-wrapper {
-    margin-top: 30px;
+  margin-top: 30px;
 }
 
 .cari-btn {
   height: 40px;
   background-color: #1B3A57;
   color: white;
-  padding: 12px 24px;
+  padding: 0 20px;
   border: none;
   border-radius: 20px;
-  padding: 0 20px;
   font-weight: bold;
   cursor: pointer;
 }
 
 .body-title {
-    padding: 40px;
+  padding: 40px;
 }
 
-.explore-1, .explore-2 {
-    display: flex;
+.explore-wrapper {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+  justify-content: center;
+  padding: 40px;
 }
 
-.explore-2 {
-    margin-top: 100px;
+.card {
+  width: 316px;
+  position: relative;
+  border-radius: 12px;
+  overflow: hidden;
+  background-color: white;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+  display: flex;
+  flex-direction: column;
 }
 
-.bromo img, .malio img, .boro img, .parahu img, 
-.kotu img, .ptt img, .toba img, .wai img {
-    width: 316px;
-    height: 211px;
-    border-radius: 12px;
-    margin-left: 40px;
-    margin-top: -30px;
+.card img {
+  width: 100%;
+  height: 211px;
+  object-fit: cover;
+  display: block;
+  border-radius: 12px 12px 0 0;
 }
 
-.lokasi-bromo, .lokasi-malio, .lokasi-boro, .lokasi-parahu, 
-.lokasi-kotu, .lokasi-ptt, .lokasi-toba, .lokasi-wai {
-    position: absolute;
-    margin-top: -35px;
-    margin-left: 40px;
-    width: 316px;
-    height: 80px;
-    border-radius: 0px 0px 12px 12px;
-    background-color: #1B4965;
+.card .plus {
+  position: absolute;
+  top: 12px;
+  right: 12px;
 }
 
-.lokasi-bromo h3, .lokasi-bromo h5, .lokasi-bromo img,
-.lokasi-malio h3, .lokasi-malio h5, .lokasi-malio img,
-.lokasi-boro h3, .lokasi-boro h5, .lokasi-boro img,
-.lokasi-parahu h3, .lokasi-parahu h5, .lokasi-parahu img,
-.lokasi-kotu h3, .lokasi-kotu h5, .lokasi-kotu img,
-.lokasi-ptt h3, .lokasi-ptt h5, .lokasi-ptt img,
-.lokasi-toba h3, .lokasi-toba h5, .lokasi-toba img,
-.lokasi-wai h3, .lokasi-wai h5, .lokasi-wai img {
-    color: white;
-    margin-left: 16px;
+.card .plus img {
+  width: 32px;
+  height: 32px;
+  background-color: white;
+  border-radius: 50%;
+  padding: 4px;
 }
 
-.lokasi-bromo h5, .lokasi-malio h5, .lokasi-boro h5, .lokasi-parahu h5, 
-.lokasi-kotu h5, .lokasi-ptt h5, .lokasi-toba h5, .lokasi-wai h5 {
-    margin-left: 40px;
-    margin-top: -40px;
+.card-content {
+  background-color: #1B4965;
+  padding: 16px;
+  color: white;
+  border-radius: 0 0 12px 12px;
 }
 
-.lokasi-bromo img, .lokasi-malio img, .lokasi-boro img, .lokasi-parahu img, 
-.lokasi-kotu img, .lokasi-ptt img, .lokasi-toba img, .lokasi-wai img {
-    margin-top: -40px;
-    vertical-align: middle;
+.card-content h3 {
+  margin: 0 0 8px 0;
+  font-size: 18px;
 }
 
-.plus img {
-    width: 32px;
-    display: block;
-    background-color: white;
-    height: 32px;
-    border-radius: 15px;
-    margin-left: 265px;
-    margin-top: -60px;
+.card-content .location-info {
+  display: flex;
+  align-items: center;
+  font-size: 14px;
+  gap: 6px;
 }
 
+.card .location-info img {
+  width: 20px;  /* dari besar jadi kecil */
+  height: auto;
+  margin-right: 8px;  /* kasih jarak ke teks */
+  vertical-align: middle;
+}
+
+.card .location-info {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  margin-top: 8px;
+}
