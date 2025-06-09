@@ -17,84 +17,6 @@ main {
     background-color: #F4FBFF;
 }
 
-.logo {
-    font-family: 'Stick No Bills', sans-serif;
-    font-weight: 800;
-    font-size: 36px;
-    margin-top: 20px;
-    color: #1B4965;
-}
-
-.search {
-    display: flex;
-    align-items: center;
-    background-color: #F4FBFF;
-    border-radius: 20px;
-    padding: 8px 12px;
-    width: 300px;
-    margin-left: 130px;
-    margin-top: -40px;
-}
-
-.search img {
-    width: 20px;
-    height: 20px;
-    margin-right: 10px;
-    opacity: 0.5;
-}
-
-.search input {
-    border: none;
-    background: transparent;
-    outline: none;
-    font-size: 14px;
-    color: #555;
-    width: 100%;
-}
-
-.nav-bar {
-    width: 100%;
-    align-items: flex-end;
-    text-align: right;
-    color: #1B4965;
-    font-size: 18px;
-    font-weight: 500;
-    margin-left: -200px;
-    margin-top: -30px;
-    text-decoration: none;
-}
-
-.nav-bar a{
-    color: var(--Primary-Main, #1B4965);
-    font-family: Poppins;
-    font-size: 20px;
-    font-style: normal;
-    font-weight: 500;
-    line-height: 120%; 
-    text-decoration: none;
-}
-
-.profile {
-    position: relative;
-    width: fit-content;
-    height: fit-content;
-    text-align: right;
-    margin-left: 1100px; 
-    margin-top: -30px;
-}
-
-.ellipse {
-    display: block;
-}
-
-#profil {
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    z-index: 1;
-}
-
 .title {
     margin-top: 40px;
     text-align: center;
@@ -184,33 +106,14 @@ main {
     color: var(--Neutral-03, #E4E8EC);
 }
 
-.upload {
+.upload img {
     width: 229px;
-    height: 139px;
+    height: 180px;
     flex-shrink: 0;
     border-radius: 8px;
     background: var(--Neutral-06, #BABEC1);
     margin-left: 620px;
-    margin-top: -140px;
-}
-
-.upload img {
-    width: 80px;
-    height: 80px;
-    aspect-ratio: 1/1;
-    margin-left: 75px;
-    margin-top: 15px;
-}
-
-.upload input {
-    align-self: stretch;
-    color: var(--Neutral-03, #E4E8EC);
-    font-family: Poppins;
-    font-size: 15px;
-    font-style: normal;
-    font-weight: 400;
-    line-height: 120%; 
-    margin-left: 10px;
+    margin-top: -180px;
 }
 
 .note, .itinerary {
@@ -344,6 +247,7 @@ button {
 @media (max-width: 768px) {
       main {
         padding: 10px;
+        width: 100%;
       }
 
       .title {
@@ -362,7 +266,8 @@ button {
 
       .container {
         margin-left: -10px;
-        width: 750px;
+        width: 100%;
+        margin: auto;
       }
 
       .note, .notes,
@@ -395,3 +300,4 @@ button {
         max-width: none;
       }
 }
+

@@ -12,7 +12,7 @@
     <div id="navbar-container"></div>
     <script>
         document.addEventListener('DOMContentLoaded', () => {
-            fetch('../../src/components/navbar.html')
+            fetch('/src/components/navbar.html')
                 .then(response => response.text())
                 .then(html => {
                     document.getElementById('navbar-container').innerHTML = html;
@@ -34,8 +34,7 @@
                 <input type="text" placeholder="Tambah lokasi">
             </div>
             <div class="upload">
-                <img src="../../assets/icons/upload.svg">
-                <input type="file" placeholder="Tambah Gambar">
+                <img src="../../assets/images/Travel.jpg">
             </div>
         </div>
         <div class="note">
