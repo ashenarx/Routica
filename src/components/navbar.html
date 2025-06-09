@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Navbar</title>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Stick+No+Bills:wght@200..800&display=swap" rel="stylesheet">
+</head>
+<body>
+    <header class="navbar">
+        <div class="logo">ROUTICA</div>
+        <div class="search">
+            <img src="/src/assets/icons/search.svg" alt="Search Icon">
+            <input type="text" placeholder="Cari destinasi impianmu di sini">
+        </div>
+        <nav class="nav-bar">
+            <a href="#">Explore</a>
+            <a href="#">Itineraries</a>
+        </nav>
+        <div class="profile">
+            <img class="ellipse" src="/src/assets/icons/Ellipse 2.svg" alt="Profile Icon">
+            <img id="profil" src="/src/assets/icons/Profile.svg" alt="Profile">
+        </div>
+    </header>
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            const searchInput = document.querySelector('.search input');
+            searchInput.addEventListener('input', (event) => {
+                console.log('Search query:', event.target.value);
+            });
+        });
+    </script>
+    <style>
+        .navbar {
+            margin-bottom: 10px;
+            padding: 20px 0;
+            display: flex;
+            align-items: center;    
+        }
+
+        .logo {
+            font-family: 'Stick No Bills', sans-serif;
+            margin-right: auto;
+            margin-left: 40px;
+            font-weight: 800;
+            font-size: 36px;
+            color: #1B4965;
+        }
+
+        .search {
+            display: flex;
+            align-items: center;
+            background-color: #F4FBFF;
+            border-radius: 20px;
+            padding: 8px 12px;
+            margin-left: 120px;
+            width: -webkit-fill-available;
+            max-width: 360px;
+            height: 28px;
+        }
+
+        .search img {
+            width: 20px;
+            height: 20px;
+            opacity: 0.5;
+        }
+
+        .search input {
+            border: none;
+            background: transparent;
+            outline: none;
+            font-size: 14px;
+            color: #555;
+            width: 100%;
+        }
+
+        .nav-bar {
+            width: 100%;
+            align-items: flex-end;
+            text-align: right;
+            color: #1B4965;
+            font-size: 18px;
+            font-weight: 500;
+            margin-left: auto;
+            margin-right: 40px;
+            text-decoration: none;
+        }
+
+        .nav-bar a {
+            color: var(--Primary-Main, #1B4965);
+            font-family: Poppins;
+            font-size: 20px;
+            font-style: normal;
+            font-weight: 500;
+            line-height: 120%;
+            text-decoration: none;
+        }
+
+        .profile {
+            position: relative;
+            display: flex;
+            margin-left: auto;
+            margin-right: 40px;
+            width: 40px;
+            height: 40px;
+        }
+
+        .ellipse {
+            display: block;
+        }
+
+        #profil {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            z-index: 1;
+        }
+    </style>
+</body>
+</html>
