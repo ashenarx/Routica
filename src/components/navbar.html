@@ -35,7 +35,11 @@
         .navbar {
             padding: 20px 0;
             display: flex;
-            align-items: center;    
+            align-items: center;
+            background-color: #fff; 
+            position: sticky;
+            top: 0;
+            font-family: 'Poppins', sans-serif;
         }
 
         .logo {
@@ -45,6 +49,11 @@
             font-weight: 800;
             font-size: 36px;
             color: #1B4965;
+            transition: color 0.3s ease;
+        }
+
+        .logo:hover {
+            color: #0077b6;
         }
 
         .search {
@@ -57,6 +66,7 @@
             width: -webkit-fill-available;
             max-width: 360px;
             height: 28px;
+            box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1) inset;
         }
 
         .search img {
@@ -94,6 +104,28 @@
             font-weight: 500;
             line-height: 120%;
             text-decoration: none;
+            margin-right: 20px;
+            position: relative;
+            transition: color 0.3s ease;
+        }
+
+        .nav-bar a::after {
+            content: '';
+            position: absolute;
+            bottom: -5px;
+            left: 0;
+            width: 0;
+            height: 2px;
+            background-color: var(--Primary-Main, #1B4965);
+            transition: width 0.3s ease;
+        }
+
+        .nav-bar a:hover {
+            color: #1B4965;
+        }
+
+        .nav-bar a:hover::after {
+            width: 100%;
         }
 
         .profile {
@@ -103,10 +135,22 @@
             margin-right: 40px;
             width: 40px;
             height: 40px;
+            transition: transform 0.3s ease;
+        }
+
+        .profile:hover {
+            transform: scale(1.1);
         }
 
         .ellipse {
             display: block;
+            border: 2px solid transparent;
+            border-radius: 50%;
+            transition: border-color 0.3s ease;
+        }
+
+        .profile:hover .ellipse {
+            border-color: var(--Primary-Main, #1B4965);
         }
 
         #profil {
