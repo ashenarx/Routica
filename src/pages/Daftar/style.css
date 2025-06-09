@@ -9,11 +9,11 @@ header {
 }
 
 main {
-    flex-direction: column;
-    font-family: 'Poppins', sans-serif;
     display: flex;
-    height: 100vh;
-    margin: 0;
+    font-family: 'Poppins', sans-serif;
+    flex-direction: column;
+    align-items: center;
+    padding: 20px;
     background-color: #F4FBFF;
 }
 
@@ -24,128 +24,148 @@ main {
 
 .itinerary {
     display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 20px;
+    margin-top: 20px;
 }
 
-.liburan-malang-1 {
-    margin-left: 210px;
-}
-
+.liburan-malang-1,
 .liburan-malang-2 {
-    margin-left: 30px;
+    width: 100%;
+    max-width: 400px;
+    border-radius: 12px;
+    background-color: #FFF;
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+}
+
+.kww {
+    position: relative;
 }
 
 #image {
-    width: 400px;
-    height: 200px;
-    flex-shrink: 0;
-    aspect-ratio: 3/4;
-    border-radius: 12px 12px 0px 0px;
-    background: url(<path-to-image>) lightgray 50% / cover no-repeat;
+    width: 100%;
+    height: auto;
+    border-radius: 12px 12px 0 0;
 }
 
-#bulet {
+.edit,
+.delete {
+    position: absolute;
+    top: 10px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
     width: 40px;
     height: 40px;
-    flex-shrink: 0;
-    aspect-ratio: 1/1;
-    fill: var(--Neutral-01, #FFF);
-    transform: translateY(-190px);
-    margin-left: 290px;
 }
 
-#pensil, #sampah {
-    width: 32px;
-    height: 32px;
-    flex-shrink: 0;
-    aspect-ratio: 1/1;
-    transform: translateY(-195px);
-    margin-left: -40px;
+.edit {
+    right: 60px;
 }
 
 .delete {
-    margin-left: 50px;
-    margin-top: -45px;
+    right: 10px;
+}
+
+.edit #bulet,
+.delete #bulet {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 1;
+}
+
+.edit img:not(#bulet),
+.delete img:not(#bulet) {
+    position: relative;
+    z-index: 2;
 }
 
 .detail-kww {
-    display: flex;
-    width: 368px;
-    height: 80px;
-    padding: 20px 16px;
-    flex-direction: column;
-    align-items: flex-start;
-    gap: 12px;
-    border-radius: 0px 0px 12px 12px;
-    background: var(--Primary-Main, #1B4965);
-    margin-top: -53px;
+    padding: 16px;
+    background-color: #1B4965;
+    color: #FFF;
+    border-radius: 0 0 12px 12px;
 }
 
 .detail-kww label {
-    align-self: stretch;
-    color: var(--Neutral-01, #FFF);
-    font-family: Poppins;
-    font-size: 24px;
-    font-style: normal;
+    font-size: 18px;
     font-weight: 700;
-    line-height: 120%; 
 }
 
-.date, .location {
-    display: flex;
-    padding: 8px 12px;
-    justify-content: center;
-    align-items: center;
-    gap: 4px;
-    border-radius: 100px;
-    background: var(--Secondary-Main, #CAE9FF);
-    height: 25px;
-}
-
+.date,
 .location {
-    margin-left: 240px;
-    margin-top: -52px;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    margin-top: 8px;
 }
 
-.date img, .location img {
+.date img,
+.location img {
     width: 20px;
     height: 20px;
-    aspect-ratio: 1/1;
 }
 
-.date p, .location p {
-    color: var(--Primary-Main, #1B4965);
-    font-family: Poppins;
+.date p,
+.location p {
     font-size: 14px;
-    font-style: normal;
     font-weight: 500;
-    line-height: 21px; 
 }
 
 .add-itinerary {
-    display: inline-flex;
-    padding: 5px;
-    justify-content: center;
-    width: 200px;
-    height: 40px;
+    display: flex;
     align-items: center;
-    gap: 4px;
-    border-radius: 100px;
-    background: var(--Primary-Main, #1B4965);
-    margin-top: 40px;
-    margin-left: 530px;
+    gap: 8px;
+    padding: 12px 24px;
+    background-color: #1B4965;
+    color: #FFF;
+    border-radius: 20px;
+    cursor: pointer;
+    margin-top: 20px;
 }
 
 .add-itinerary img {
     width: 20px;
     height: 20px;
-    aspect-ratio: 1/1;
 }
 
-.add-itinerary p {
-    color: var(--Neutral-01, #FFF);
-    font-family: Poppins;
-    font-size: 16px;
-    font-style: normal;
-    font-weight: 600;
-    line-height: 24px; 
+@media (max-width: 768px) {
+    .itinerary {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .liburan-malang-1,
+    .liburan-malang-2 {
+        max-width: 100%;
+    }
+
+    .add-itinerary {
+        width: 100%;
+        justify-content: center;
+    }
+}
+
+@media (max-width: 480px) {
+    .title h1 {
+        font-size: 20px;
+    }
+
+    .detail-kww label {
+        font-size: 16px;
+    }
+
+    .date p,
+    .location p {
+        font-size: 12px;
+    }
+
+    .add-itinerary {
+        padding: 10px 20px;
+        font-size: 14px;
+    }
 }
