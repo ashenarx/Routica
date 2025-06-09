@@ -18,7 +18,6 @@ main {
 }
 
 .title {
-    margin-top: 40px;
     text-align: center;
 }
 
@@ -86,9 +85,12 @@ main {
 
 .detail-kww {
     padding: 16px;
-    background-color: #1B4965;
+    background-color: #1B4965; /* Keep the existing background for the container */
     color: #FFF;
     border-radius: 0 0 12px 12px;
+    display: flex; /* Enable flexbox for side-by-side layout */
+    flex-direction: column; /* Stack label and the date/location row */
+    gap: 8px; /* Space between label and date/location */
 }
 
 .detail-kww label {
@@ -101,19 +103,32 @@ main {
     display: flex;
     align-items: center;
     gap: 8px;
-    margin-top: 8px;
+    background-color: #CAE9FF; /* Set background color */
+    color: #1B4965; /* Adjust text/icon color for contrast */
+    padding: 8px 12px; /* Add padding for better appearance */
+    border-radius: 8px; /* Optional: rounded corners */
+}
+
+/* Wrap date and location in a flex container for side-by-side layout */
+.detail-kww > div {
+    display: flex;
+    flex-direction: row; /* Arrange date and location side by side */
+    gap: 12px; /* Space between date and location */
+    flex-wrap: wrap; /* Allow wrapping on smaller screens */
 }
 
 .date img,
 .location img {
     width: 20px;
     height: 20px;
+    filter: brightness(0) saturate(100%) invert(20%) sepia(50%) saturate(2000%) hue-rotate(180deg); /* Adjust icon color to match text */
 }
 
 .date p,
 .location p {
     font-size: 14px;
     font-weight: 500;
+    margin: 0; /* Remove default margins */
 }
 
 .add-itinerary {
@@ -123,7 +138,7 @@ main {
     padding: 12px 24px;
     background-color: #1B4965;
     color: #FFF;
-    border-radius: 20px;
+    border-radius: 100px;
     cursor: pointer;
     margin-top: 20px;
 }
@@ -134,27 +149,13 @@ main {
 }
 
 @media (max-width: 768px) {
-    .itinerary {
-        flex-direction: column;
-        align-items: center;
-    }
-
-    .liburan-malang-1,
-    .liburan-malang-2 {
-        max-width: 100%;
-    }
-
-    .add-itinerary {
-        width: 100%;
-        justify-content: center;
+    .detail-kww > div {
+        flex-direction: column; /* Stack date and location vertically on smaller screens */
+        gap: 8px;
     }
 }
 
 @media (max-width: 480px) {
-    .title h1 {
-        font-size: 20px;
-    }
-
     .detail-kww label {
         font-size: 16px;
     }
@@ -164,8 +165,8 @@ main {
         font-size: 12px;
     }
 
-    .add-itinerary {
-        padding: 10px 20px;
-        font-size: 14px;
+    .date,
+    .location {
+        padding: 6px 10px; /* Slightly smaller padding for mobile */
     }
 }
