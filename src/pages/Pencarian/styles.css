@@ -12,6 +12,12 @@ main {
     margin: 0;
     background-color: #F4FBFF;
 }
+h1 {
+    font-size: 2.5rem;
+    font-weight: 700;
+    margin-left: 20vh;
+    color: #1B4965;
+}
 
 .title {
     margin-top: 40px;

@@ -161,11 +161,6 @@
     background-color: #15304d;
 }
 
-/* Activities Section */
-.activities-section {
-    /* Removed margin-top since it's now inside destination-content */
-}
-
 .activities-grid {
     display: grid;
     grid-template-columns: repeat(2, 1fr);
@@ -192,11 +187,6 @@
     align-items: center;
     justify-content: center;
     border-radius: 50%;
-}
-
-/* Important Information Section */
-.important-info {
-    /* Removed margin-top since it's now inside destination-content */
 }
 
 .important-info ul {
