@@ -9,4 +9,13 @@ document.addEventListener('DOMContentLoaded', () => {
 
     emailInput.addEventListener('input', updateButtonState);
     passwordInput.addEventListener('input', updateButtonState);
+    loginButton.addEventListener('click', () => {
+        if (emailInput.value.trim() && passwordInput.value.trim()) {
+            // Simulate a login action
+            alert('Login successful!');
+            window.location.href = "../Pencarian/pencarian.html";
+        } else {
+            alert('Please fill in both fields.');
+        }
+    });
 });
