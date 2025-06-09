@@ -1,4 +1,3 @@
-<!-- src/pages/Destinasi/destination.php -->
 <!DOCTYPE html>
 <html>
 <head>
