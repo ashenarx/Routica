@@ -22,6 +22,21 @@ main {
     margin-left: 20vh;
 }
 
+.back-button {
+    align-items: left;
+    background: none;
+    border: none;
+    outline: none;
+    cursor: pointer;
+    color: #000000;
+    margin-left: 5vh;
+    padding: 0;
+}
+
+.back-button:focus {
+    outline: none; 
+}
+
 .explore-wrapper {
     display: flex;
     flex-wrap: wrap;
