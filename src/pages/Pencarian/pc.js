@@ -1,8 +1,15 @@
 document.addEventListener('DOMContentLoaded', () => {
-    console.log('Fetching data...');
+    // Load navbar
+    fetch('/src/components/navbar.html')
+        .then(response => response.text())
+        .then(html => {
+            document.getElementById('navbar-container').innerHTML = html;
+        })
+        .catch(error => console.error('Error fetching navbar:', error));
+
+    // Fetch initial recommendations
     fetch('./getDestination.php')
         .then(response => {
-            console.log('Response status:', response.status);
             if (!response.ok) {
                 throw new Error('Network response was not ok ' + response.status);
             }
@@ -44,8 +51,9 @@ document.addEventListener('DOMContentLoaded', () => {
             exploreWrapper.innerHTML = `<p>Error generate rekomendasi destinasi: ${error.message}</p>`;
         });
 
-        const cariBtn = document.querySelector('.cari-btn');
-        cariBtn.addEventListener('click', () => {
+    // Search functionality
+    const cariBtn = document.querySelector('.cari-btn');
+    cariBtn.addEventListener('click', () => {
         const jenis = document.getElementById('jenis').value;
         const lokasi = document.getElementById('lokasi').value;
 
