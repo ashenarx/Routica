@@ -25,7 +25,7 @@
             <h1>Rencanakan perjalanan barumu</h1>
         </div>
         <div class="container">
-            <label>|Judul Trip</label>
+            <input type="text" placeholder="Judul Trip">
             <div class="date">
                 <input type="date" placeholder="Tambah tanggal perjalanan">
             </div>
@@ -37,16 +37,19 @@
                 <img src="../../assets/images/Travel.jpg">
             </div>
         </div>
-        <div class="note">
-            <img src="../../assets/icons/chevron-down.svg">
+        <div class="note" id="toggleNote">
+            <img id="chevronIcon" src="../../assets/icons/chevron-down.svg">
             <label>Catatan</label>
         </div>
-        <div class="notes">
+        <div class="notes" id="notesSection">
             <input type="text" placeholder="Masukkan catatan yang perlu untuk perjalananmu di sini">
         </div>
-        <div class="itinerary">
-            <img src="../../assets/icons/chevron-down.svg">
+        <div class="itinerary" id="toggleItinerary">
+            <img id="chevronItinerary" src="../../assets/icons/chevron-down.svg">
             <label>Itinerary</label>
+        </div>
+        <div class="itineraries" id="itinerariesSection">
+
         </div>
         <div class="dates">
             <input type="date" placeholder="Tambah tanggal perjalanan">
@@ -63,5 +66,7 @@
             <button>Simpan itinerary</button>
         </div>
     </main>
+
+    <script src="script.js"></script>
 </body>
 </html>
