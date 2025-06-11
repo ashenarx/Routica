@@ -21,63 +21,25 @@
         });
     </script>
     <main>
-        <div class="title">
+        <div class="page-title">
             <h1>Daftar itinerary</h1>
         </div>
-        <div class="itinerary">
-            <div class="liburan-malang-1">
-                <div class="kww">
-                    <img id="image" src="../../assets/images/Kampung Warna-Warni.png">
-                    <div class="edit">
-                        <img id="bulet" src="../../assets/icons/Ellipse 3.svg">
-                        <img id="pensil" src="../../assets/icons/pencil.svg">
-                    </div>
-                    <div class="delete">
-                        <img id="bulet" src="../../assets/icons/Ellipse 3.svg">
-                        <img id="sampah" src="../../assets/icons/trash.svg">
-                    </div>
-                </div>
-                <div class="detail-kww">
-                    <label>Liburan ke Malang</label>
-                    <div class="date">
-                        <img src="../../assets/icons/cal-blue.svg">
-                        <p>30 April 2025 - 1 Mei 2025</p>
-                    </div>
-                    <div class="location">
-                        <img src="../../assets/icons/location-marker-blue.svg">
-                        <p>3 Tempat</p>
-                    </div>
-                </div>
-            </div>
-            <div class="liburan-malang-2">
-                <div class="kww">
-                    <img id="image" src="../../assets/images/Kampung Warna-Warni.png">
-                    <div class="edit">
-                        <img id="bulet" src="../../assets/icons/Ellipse 3.svg">
-                        <img id="pensil" src="../../assets/icons/pencil.svg">
-                    </div>
-                    <div class="delete">
-                        <img id="bulet" src="../../assets/icons/Ellipse 3.svg">
-                        <img id="sampah" src="../../assets/icons/trash.svg">
-                    </div>
-                </div>
-                <div class="detail-kww">
-                    <label>Liburan ke Malang</label>
-                    <div class="date">
-                        <img src="../../assets/icons/cal-blue.svg">
-                        <p>30 April 2025 - 1 Mei 2025</p>
-                    </div>
-                    <div class="location">
-                        <img src="../../assets/icons/location-marker-blue.svg">
-                        <p>3 Tempat</p>
-                    </div>
-                </div>
-            </div>
-        </div>
-        <div class="add-itinerary">
-            <img src="../../assets/icons/cal-white.svg">
-            <p>Tambah itinerary</p>
+        <div class="itinerary-list"></div>
+        <div class="add-itinerary" onclick="window.location.href='/src/pages/Perencanaan/perencanaan.html'">
+            <img class="add-itinerary__icon" src="../../assets/icons/cal-white.svg">
+            <p class="add-itinerary__text">Tambah itinerary</p>
         </div>
     </main>
+    <div id="delete-modal" class="modal" style="display: none;">
+        <div class="modal__content">
+            <h1 class="modal__title">Hapus itinerary</h1>
+            <p class="modal__description">Apakah Anda yakin ingin menghapus itinerary ini? Tindakan ini tidak dapat dibatalkan.</p>
+            <div class="modal__actions">
+                <button class="modal__cancel-button" onclick="closeDeleteModal()">Batalkan</button>
+                <button class="modal__delete-button">Hapus</button>
+            </div>
+        </div>
+    </div>
+    <script src="script.js"></script>
 </body>
 </html>
