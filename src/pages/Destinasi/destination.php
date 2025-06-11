@@ -38,6 +38,7 @@
                 $activities = explode('|', $row['activities']);
                 $important_info = explode('|', $row['important_info']);
             ?>
+                <img src="../../assets/icons/chevron-left.svg">
                 <h2>Jelajahi</h2>
                 <h1><?php echo htmlspecialchars($row['name']); ?></h1>
                 <span class="category-badge"><?php echo htmlspecialchars($row['category']); ?></span>
