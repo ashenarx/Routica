@@ -41,6 +41,6 @@ document.addEventListener('DOMContentLoaded', () => {
         .catch(error => {
             console.error('Error fetching destinations:', error);
             const exploreWrapper = document.getElementById('explore-wrapper');
-            exploreWrapper.innerHTML = `<p>Error loading destinations: ${error.message}</p>`;
+            exploreWrapper.innerHTML = `<p>Error generate rekomendasi destinasi: ${error.message}</p>`;
         });
 });
