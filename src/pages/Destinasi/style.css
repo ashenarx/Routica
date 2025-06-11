@@ -63,7 +63,9 @@
 
 .destination-detail h2 {
     font-size: 1.5rem;
-    margin-bottom: 0.5rem;
+    font-weight: 100;
+    margin-left: 5vh;
+    margin-top: 1vh;
 }
 
 .destination-detail h3 {
@@ -71,8 +73,20 @@
     margin-bottom: 1rem;
 }
 
-.destination-detail img {
-    
+.back {
+    transform: translateY(42px);
+    margin-left: -5vh;
+}
+
+.back-button {
+    align-items: left;
+    background: none;
+    border: none;
+    outline: none;
+    cursor: pointer;
+    color: #000000;
+    margin-left: 5vh;
+    padding: 0;
 }
 
 .category-badge {

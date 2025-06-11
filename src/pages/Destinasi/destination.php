@@ -38,7 +38,11 @@
                 $activities = explode('|', $row['activities']);
                 $important_info = explode('|', $row['important_info']);
             ?>
-                <img src="../../assets/icons/chevron-left.svg">
+                <div class="back">
+                    <button class="back-button" onclick="goBack()">
+                        <img src="../../assets/icons/chevron-left.svg" alt="Back" />        
+                    </button>
+                </div>
                 <h2>Jelajahi</h2>
                 <h1><?php echo htmlspecialchars($row['name']); ?></h1>
                 <span class="category-badge"><?php echo htmlspecialchars($row['category']); ?></span>
@@ -105,5 +109,7 @@
         $conn->close();
         ?>
     </section>
+
+    <script src="script.js"></script>
 </body>
 </html>
