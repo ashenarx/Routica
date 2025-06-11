@@ -9,128 +9,136 @@
 </head>
 <body>
     <header class="navbar">
-        <div class="logo">
-            <a href="/src/pages/Pencarian/pencarian.html" style="text-decoration: none; color: inherit;">ROUTICA</a>
+        <div class="navbar__logo">
+            <a href="/src/pages/Pencarian/pencarian.html" class="navbar__logo-link">ROUTICA</a>
         </div>
-        <div class="search">
-            <img src="/src/assets/icons/search.svg" alt="Search Icon">
-            <input type="text" placeholder="Cari destinasi impianmu di sini">
+        <div class="navbar__search">
+            <img src="/src/assets/icons/search.svg" alt="Search Icon" class="navbar__search-icon">
+            <input type="text" placeholder="Cari destinasi impianmu di sini" class="navbar__search-input">
         </div>
-        <nav class="nav-bar">
-            <a href="#">Explore</a>
-            <a href="#">Itineraries</a>
+        <nav class="navbar__links">
+            <a href="/src/pages/Pencarian/pencarian.html" class="navbar__link">Explore</a>
+            <a href="/src/pages/Daftar/daftar.html" class="navbar__link">Itineraries</a>
         </nav>
-        <div class="profile">
-            <img class="ellipse" src="/src/assets/icons/Ellipse 2.svg" alt="Profile Icon">
-            <img id="profil" src="/src/assets/icons/Profile.svg" alt="Profile">
+        <div class="navbar__profile">
+            <img class="navbar__profile-bg" src="/src/assets/icons/Ellipse 2.svg" alt="Profile Icon">
+            <img class="navbar__profile-icon" src="/src/assets/icons/Profile.svg" alt="Profile">
         </div>
     </header>
     <script>
         document.addEventListener('DOMContentLoaded', () => {
-            const searchInput = document.querySelector('.search input');
+            const searchInput = document.querySelector('.navbar__search-input');
             searchInput.addEventListener('input', (event) => {
                 console.log('Search query:', event.target.value);
             });
         });
     </script>
     <style>
+        :root {
+            --primary-color: #1B4965;
+            --hover-color: #0077b6;
+            --background-color: #F4FBFF;
+            --font-family-primary: 'Poppins', sans-serif;
+            --font-family-logo: 'Stick No Bills', sans-serif;
+        }
+
+        body {
+            margin: 0;
+            font-family: var(--font-family-primary);
+        }
+
         .navbar {
             padding: 20px 0;
             display: flex;
             align-items: center;
-            background-color: #fff; 
+            background-color: #fff;
             position: sticky;
             top: 0;
-            font-family: 'Poppins', sans-serif;
+            z-index: 1000;
         }
 
-        .logo {
-            font-family: 'Stick No Bills', sans-serif;
+        .navbar__logo {
             margin-right: auto;
             margin-left: 40px;
+            font-family: var(--font-family-logo);
             font-weight: 800;
-            font-size: 36px;
-            color: #1B4965;
+            font-size: 2.25rem; /* 36px */
+            color: var(--primary-color);
             transition: color 0.3s ease;
         }
 
-        .logo:hover {
-            color: #0077b6;
+        .navbar__logo-link {
+            text-decoration: none;
+            color: inherit;
         }
 
-        .search {
+        .navbar__logo:hover {
+            color: var(--hover-color);
+        }
+
+        .navbar__search {
             display: flex;
             align-items: center;
-            background-color: #F4FBFF;
+            background-color: var(--background-color);
             border-radius: 20px;
             padding: 8px 12px;
             margin-left: 120px;
-            width: -webkit-fill-available;
+            width: 100%;
             max-width: 360px;
-            height: 28px;
-            box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1) inset;
+            box-shadow: inset 0px 4px 8px rgba(0, 0, 0, 0.1);
         }
 
-        .search img {
+        .navbar__search-icon {
             width: 20px;
             height: 20px;
             opacity: 0.5;
         }
 
-        .search input {
+        .navbar__search-input {
             border: none;
             background: transparent;
             outline: none;
-            font-size: 14px;
+            font-size: 0.875rem; /* 14px */
             color: #555;
             width: 100%;
         }
 
-        .nav-bar {
-            width: 100%;
-            align-items: flex-end;
-            text-align: right;
-            color: #1B4965;
-            font-size: 18px;
-            font-weight: 500;
+        .navbar__links {
+            display: flex;
             margin-left: auto;
             margin-right: 40px;
-            text-decoration: none;
         }
 
-        .nav-bar a {
-            color: var(--Primary-Main, #1B4965);
-            font-family: Poppins;
-            font-size: 20px;
-            font-style: normal;
+        .navbar__link {
+            color: var(--primary-color);
+            font-size: 1.25rem; /* 20px */
             font-weight: 500;
-            line-height: 120%;
             text-decoration: none;
             margin-right: 20px;
             position: relative;
             transition: color 0.3s ease;
         }
 
-        .nav-bar a::after {
+        .navbar__link::after {
             content: '';
             position: absolute;
             bottom: -5px;
             left: 0;
             width: 0;
             height: 2px;
-            background-color: var(--Primary-Main, #1B4965);
+            background-color: var(--primary-color);
             transition: width 0.3s ease;
         }
 
-        .nav-bar a:hover {
-            color: #1B4965;
+        .navbar__link:hover {
+            color: var(--hover-color);
         }
 
-        .nav-bar a:hover::after {
+        .navbar__link:hover::after {
             width: 100%;
         }
 
-        .profile {
+        .navbar__profile {
             position: relative;
             display: flex;
             margin-left: auto;
@@ -140,22 +148,22 @@
             transition: transform 0.3s ease;
         }
 
-        .profile:hover {
+        .navbar__profile:hover {
             transform: scale(1.1);
         }
 
-        .ellipse {
+        .navbar__profile-bg {
             display: block;
             border: 2px solid transparent;
             border-radius: 50%;
             transition: border-color 0.3s ease;
         }
 
-        .profile:hover .ellipse {
-            border-color: var(--Primary-Main, #1B4965);
+        .navbar__profile:hover .navbar__profile-bg {
+            border-color: var(--primary-color);
         }
 
-        #profil {
+        .navbar__profile-icon {
             position: absolute;
             top: 50%;
             left: 50%;
