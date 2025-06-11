@@ -1,6 +1,6 @@
 document.addEventListener('DOMContentLoaded', () => {
     console.log('Fetching data...');
-    fetch('./get_destination.php') // Path relatif
+    fetch('./get_destination.php')
         .then(response => {
             console.log('Response status:', response.status);
             if (!response.ok) {
@@ -33,7 +33,7 @@ document.addEventListener('DOMContentLoaded', () => {
                     </div>
                 `;
                 card.addEventListener('click', () => {
-                    window.location.href = `destination.php?name=${(destination.name || '').replace(/ /g, '_')}`;
+                    window.location.href = `../Destinasi/destination.php?name=${(destination.name || '').replace(/ /g, '_')}`;
                 });
                 exploreWrapper.appendChild(card);
             });
