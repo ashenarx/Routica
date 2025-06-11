@@ -1,6 +1,6 @@
 document.addEventListener('DOMContentLoaded', () => {
     console.log('Fetching data...');
-    fetch('./get_destination.php')
+    fetch('./getDestination.php')
         .then(response => {
             console.log('Response status:', response.status);
             if (!response.ok) {
