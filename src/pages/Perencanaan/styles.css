@@ -9,6 +9,7 @@ main {
     font-family: 'Poppins', sans-serif;
     display: flex;
     height: 100%;
+    width: auto;
     margin: 0;
     background-color: #F4FBFF;
 }
@@ -28,27 +29,32 @@ main {
     margin-top: 10px;
 }
 
-.container label {
+.container input {
     color: var(--Neutral-03, #E4E8EC);
     font-family: Poppins;
     font-size: 36px;
     font-style: normal;
     font-weight: 700;
-    line-height: 120%; 
     display: block;
     padding: 40px;
+    border: none;
+    background: transparent;
+    outline: none;
+}
+
+.container input::placeholder {
+    color: white;
 }
 
 .date {
     display: inline-flex;
-    padding: 12px 24px;
     justify-content: center;
+    height: 50px;
     align-items: center;
     gap: 4px;
     border-radius: 100px;
     background: var(--Neutral-06, #BABEC1);
     margin-left: 40px;
-    margin-top: 10px;
 }
 
 .date img {
@@ -71,19 +77,22 @@ main {
 
 .location {
     display: inline-flex;
-    padding: 12px 24px;
     justify-content: center;
     align-items: center;
+    height: 50px;
+    width: auto;
     gap: 4px;
     border-radius: 100px;
     background: var(--Neutral-06, #BABEC1);
     transform: translateY(5px);
     margin-left: 20px;
+    margin-top: -10px;
 }
 
 .location img {
     width: 20px;
     height: 20px;
+    margin-left: 20px;
 }
 
 .location input {
@@ -96,6 +105,7 @@ main {
     border: none;
     background: transparent;
     outline: none;
+    margin-left: -40px;
 }
 
 .location input::placeholder {
@@ -122,6 +132,11 @@ main {
     height: 32px;
     aspect-ratio: 1/1;
     transform: translateY(6px);
+}
+
+.note img, .itinerary img {
+    transition: transform 0.3s ease;
+    cursor: pointer;
 }
 
 .note label, .itinerary label {
@@ -159,6 +174,11 @@ main {
     background: transparent;
     outline: none;
     width: 100%;
+}
+
+.chevron-rotate {
+    transform: rotate(-90deg); /* arah ke kanan */
+    transition: transform 0.3s ease;
 }
 
 .dates {
@@ -256,8 +276,20 @@ button {
 
       .location {
         transform: translateY(25px);
-        margin-left: -210px;
-        width: 200px;
+        margin-left: -235px;
+        width: 230px;
+      }
+
+      .location img {
+        transform: translateX(60px);
+      }
+
+      .location input {
+        margin-left: 20px;
+      }
+
+      .upload img {
+        width: auto;
       }
 
       .container {
