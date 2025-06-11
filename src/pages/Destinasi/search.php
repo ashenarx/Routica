@@ -8,20 +8,17 @@
     <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Post No Bills Colombo ExtraBold:wght@400&display=swap" />
 </head>
 <body>
-    <header class="header">
-        <div class="logo">ROUTICA</div>
-        <div class="search-bar">
-            <form method="GET" action="index.php">
-                <input type="text" name="search" placeholder="Cari destinasi impianmu di sini" value="<?php echo isset($_GET['search']) ? htmlspecialchars($_GET['search']) : ''; ?>" />
-                <button type="submit">Search</button>
-            </form>
-        </div>
-        <nav class="nav-links">
-            <a href="#">EXPLORE</a>
-            <a href="#">ITINERARIES</a>
-            <div class="profile-icon">👤</div>
-        </nav>
-    </header>
+    <div id="navbar-container"></div>
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            fetch('/src/components/navbar.html')
+                .then(response => response.text())
+                .then(html => {
+                    document.getElementById('navbar-container').innerHTML = html;
+                })
+                .catch(error => console.error('Error fetching navbar:', error));
+        });
+    </script>
 
     <section class="search-results">
         <h2>Hasil Pencarian</h2>
