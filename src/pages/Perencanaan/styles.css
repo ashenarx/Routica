@@ -169,6 +169,44 @@ main {
     width: 100%;
 }
 
+.itineraries {
+    width: 53.125rem;
+    padding: 1rem;
+    border-radius: 0.75rem;
+    border: 1px solid #BABEC1;
+    margin-top: 1.25rem;
+    display: none; /* Initially hidden until chevron is clicked */
+}
+
+.destination-item {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    padding: 0.5rem;
+    background: #FFFFFF;
+    border-radius: 0.5rem;
+    margin-bottom: 0.5rem;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+}
+
+.destination-item img {
+    width: 100px;
+    height: 100px;
+    object-fit: cover;
+    border-radius: 10px;
+}
+
+.destination-info h3 {
+    font-size: 1.2rem;
+    margin-bottom: 0.5rem;
+    color: #1B4965;
+}
+
+.destination-info p {
+    font-size: 0.9rem;
+    color: #666;
+}
+
 .chevron-rotate {
     transform: rotate(-90deg);
     transition: transform 0.3s ease;
@@ -225,25 +263,41 @@ main {
     margin-top: 1.25rem;
 }
 
-.empty h5 {
+.empty button {
+    background: transparent;
+    border: 1px solid #BABEC1;
     color: #BABEC1;
+    padding: 0.75rem 1.5rem;
+    border-radius: 6.25rem;
     font-family: Poppins, sans-serif;
     font-size: 1rem;
     font-weight: 600;
-    line-height: 1.5rem;
 }
 
-button {
-    width: 18.375rem;
-    flex-direction: column;
-    align-items: flex-start;
+.empty button:hover {
+    background: #BABEC1;
+    color: #FFFFFF;
+}
+
+.btn-save {
+    margin-top: 1.25rem;
+    text-align: center;
+}
+
+.btn-save button {
+    background: #1B4965;
+    color: #FFFFFF;
+    border: none;
+    padding: 0.75rem 1.5rem;
     border-radius: 6.25rem;
-    color: #BABEC1;
     font-family: Poppins, sans-serif;
     font-size: 1rem;
     font-weight: 600;
-    line-height: 1.5rem;
-    padding: 0.75rem;
+    cursor: pointer;
+}
+
+.btn-save button:hover {
+    background: #153a50;
 }
 
 @media (max-width: 768px) {
@@ -284,12 +338,27 @@ button {
         margin: auto;
     }
 
-    .note, .notes, .itinerary {
+    .note, .notes, .itinerary, .itineraries {
         margin-left: -0.625rem;
+        width: 100%;
     }
 
-    .notes {
-        width: 43.75rem;
+    .itineraries {
+        padding: 0.5rem;
+    }
+
+    .destination-item {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .destination-item img {
+        width: 100%;
+        height: auto;
+    }
+
+    .destination-info {
+        margin-top: 0.5rem;
     }
 
     .dates {
@@ -304,12 +373,11 @@ button {
         transform: translateX(-15.625rem);
     }
 
-    .empty {
+    .empty, .btn-save {
         transform: translateX(-15.625rem);
     }
 
-    button {
-        transform: translateX(-15.625rem);
-        max-width: none;
+    .empty button, .btn-save button {
+        width: 100%;
     }
 }

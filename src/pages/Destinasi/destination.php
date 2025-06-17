@@ -96,7 +96,7 @@
                             <p><strong>Telepon</strong><br><?php echo htmlspecialchars($row['phone']); ?></p>
                             <p><strong>Jam buka</strong><br><?php echo htmlspecialchars($row['opening_hours']); ?></p>
                         </div>
-                        <button class="itinerary-button">Tambah ke Itinerary</button>
+                        <button class="itinerary-button" data-destination='<?php echo json_encode($row); ?>'>Tambah ke Itinerary</button>
                     </div>
                 </div>
             <?php
@@ -111,5 +111,40 @@
     </section>
 
     <script src="script.js"></script>
+    <script>
+        function goBack() {
+            window.history.back();
+        }
+
+        document.addEventListener('DOMContentLoaded', () => {
+            const itineraryButton = document.querySelector('.itinerary-button');
+            if (itineraryButton) {
+                itineraryButton.addEventListener('click', () => {
+                    const destination = JSON.parse(itineraryButton.getAttribute('data-destination'));
+                    const itineraries = JSON.parse(localStorage.getItem('itineraries') || '[]');
+                    const newDestination = {
+                        name: destination.name,
+                        image: destination.main_image,
+                        addedAt: new Date().toISOString()
+                    };
+
+                    // Tambahkan destinasi ke itinerary pertama (atau buat baru jika kosong)
+                    let updated = false;
+                    for (let itinerary of itineraries) {
+                        if (!itinerary.destinations) itinerary.destinations = [];
+                        itinerary.destinations.push(newDestination);
+                        updated = true;
+                        break;
+                    }
+                    if (!updated && itineraries.length === 0) {
+                        itineraries.push({ destinations: [newDestination] });
+                    }
+                    localStorage.setItem('itineraries', JSON.stringify(itineraries));
+                    alert('Destinasi ditambahkan ke itinerary!');
+                    window.location.href = '../Perencanaan/perencanaan.html';
+                });
+            }
+        });
+    </script>
 </body>
 </html>

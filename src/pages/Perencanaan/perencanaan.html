@@ -25,13 +25,13 @@
             <h1>Rencanakan perjalanan barumu</h1>
         </div>
         <div class="container">
-            <input type="text" placeholder="Judul Trip">
+            <input id="planTitle" type="text" placeholder="Judul Trip">
             <div class="date">
-                <input type="date" placeholder="Tambah tanggal perjalanan">
+                <input id="planDate" type="date" placeholder="Tambah tanggal perjalanan">
             </div>
             <div class="location">
                 <img src="../../assets/icons/location-marker.svg">
-                <input type="text" placeholder="Tambah lokasi">
+                <input id="planLocation" type="text" placeholder="Tambah lokasi">
             </div>
             <div class="upload">
                 <img src="../../assets/images/Travel.jpg">
@@ -42,28 +42,24 @@
             <label>Catatan</label>
         </div>
         <div class="notes" id="notesSection">
-            <input type="text" placeholder="Masukkan catatan yang perlu untuk perjalananmu di sini">
+            <input id="notesInput" type="text" placeholder="Masukkan catatan yang perlu untuk perjalananmu di sini">
         </div>
         <div class="itinerary" id="toggleItinerary">
             <img id="chevronItinerary" src="../../assets/icons/chevron-down.svg">
             <label>Itinerary</label>
         </div>
         <div class="itineraries" id="itinerariesSection">
-
+            <div id="destinationsList"></div>
         </div>
-        <div class="dates">
-            <input type="date" placeholder="Tambah tanggal perjalanan">
-        </div>
-        <div class="himbauan">
+        <div class="himbauan" id="noItineraryMsg">
             <h5>Anda belum memiliki itinerary</h5>
-            <p>Silakan menambahkan tanggal perjalanan terlebih dahulu 
-                sebelum membuat itinerary</p>
+            <p>Silakan menambahkan tanggal perjalanan terlebih dahulu sebelum membuat itinerary</p>
         </div>
         <div class="empty">
-            <h5>Kosongkan</h5>
+            <button id="clearFormBtn">Kosongkan</button>
         </div>
         <div class="btn-save">
-            <button>Simpan itinerary</button>
+            <button id="saveItineraryBtn">Simpan Itinerary</button>
         </div>
     </main>
 
