@@ -1,13 +1,8 @@
-/* style.css */
-
-/* Reset default margins and paddings */
 * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
 }
-
-/* Search Results Styles */
 .search-results {
     padding: 2rem;
     font-family: 'Poppins', sans-serif;
@@ -49,7 +44,6 @@
     color: #666;
 }
 
-/* Destination Detail Styles */
 .destination-detail {
     padding: 2rem;
     font-family: 'Poppins', sans-serif;

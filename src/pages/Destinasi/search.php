@@ -25,7 +25,6 @@
         <?php
         include '../service/database.php';
 
-        // Search query
         $search = isset($_GET['search']) ? $conn->real_escape_string($_GET['search']) : '';
         $sql = "SELECT id, name, category, main_image FROM destinasi";
         if ($search) {

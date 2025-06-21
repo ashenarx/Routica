@@ -128,7 +128,6 @@
                         addedAt: new Date().toISOString()
                     };
 
-                    // Tambahkan destinasi ke itinerary pertama (atau buat baru jika kosong)
                     let updated = false;
                     for (let itinerary of itineraries) {
                         if (!itinerary.destinations) itinerary.destinations = [];

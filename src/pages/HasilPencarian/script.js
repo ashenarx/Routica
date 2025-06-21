@@ -3,7 +3,6 @@
     }
         
     document.addEventListener('DOMContentLoaded', () => {
-        // Load navbar
         fetch('/src/components/navbar.html')
             .then(response => response.text())
             .then(html => {
@@ -11,7 +10,6 @@
             })
             .catch(error => console.error('Error fetching navbar:', error));
 
-        // Fetch and display filtered results
         const urlParams = new URLSearchParams(window.location.search);
         const jenis = urlParams.get('jenis');
         const lokasi = urlParams.get('lokasi');

@@ -175,7 +175,7 @@ main {
     border-radius: 0.75rem;
     border: 1px solid #BABEC1;
     margin-top: 1.25rem;
-    display: none; /* Initially hidden until chevron is clicked */
+    display: none;
 }
 
 .destination-item {
